@@ -40,7 +40,7 @@ public class RequestDetailService {
 
     public void deleteRequestDetail(Integer detail_id) {
         RequestDetail requestDetail = requestDetailRepository.findRequestDetailById(detail_id);
-        if (requestDetail == null) throw new ApiException("no requests detail yet");
+        if (requestDetail == null) throw new ApiException("no requests detail to delete");
         requestDetailRepository.delete(requestDetail);
     }
 
